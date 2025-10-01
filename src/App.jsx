@@ -15,9 +15,8 @@ export default function App() {
     setLoading(true);
     setError("");
     try {
-      const url = `${API_URL}?q=${city}&units=metric&appid=${API_KEY}`;
+      const url = `${API_URL}?q=${city}&units=imperial&appid=${API_KEY}`;
       const response = await axios.get(url);
-      console.log(response.data);
       setWeather(response.data);
     } catch (err) {
       if (err.response && err.response.status === 404) {

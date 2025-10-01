@@ -12,7 +12,7 @@ export default function WeatherCard({ weather }) {
           alt={weather.weather[0].description}
           className="w-16 h-16"
         />
-        <p className="font-bold text-4xl">{Math.round(weather.main.temp)}°C</p>
+        <p className="font-bold text-4xl">{Math.round(weather.main.temp)}°F</p>
       </div>
       <p className="text-center text-gray-400 capitalize">
         {weather.weather[0].description}
@@ -32,7 +32,7 @@ export default function WeatherCard({ weather }) {
         </div>
         <div className="text-center">
           <p className="text-gray-400">Feels Like</p>
-          <p className="font-bold">{Math.round(weather.main.feels_like)}°C</p>
+          <p className="font-bold">{Math.round(weather.main.feels_like)}°F</p>
         </div>
       </div>
     </div>
